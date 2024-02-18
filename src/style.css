@@ -1,0 +1,39 @@
+.wrapper {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards__logo-visa {
+    width: 50px;
+    height: 50px;
+}
+
+.btn__validate {
+    background-color: #5cb85c;
+    border: 0;
+    color: #fff;
+    padding: 10px;
+}
+
+.input__validate {
+    padding: 8px 40px;
+}
+
+.success {
+    border: 3px solid green;
+}
+
+.error {
+    border: 3px solid red;
+}
+
+.cards__logo {
+    width: 30px;
+    height: 30px;
+}
+
+.cards__blur {
+    opacity: 0.5;
+}
