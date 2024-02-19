@@ -18,6 +18,7 @@ export default class Card {
     this.checkValidateNumber(this.input.value);
   })
   }
+
   checkValidateNumber(value) {
     const arr = value.split(''),
       arrModifyOdd = [],
@@ -26,21 +27,21 @@ export default class Card {
     for (let i = 0; i < arr.length; i+=2) {
       arrModifyOdd.push(arr[i] * 2);
     }
-    for(let i = 1; i < arr.length; i+=2) {
+    for (let i = 1; i < arr.length; i+=2) {
       arrModifyEven.push(+arr[i]);
     }
 
-    let sum = arrModifyOdd.map(number => {
-      let digits = number.toString().split('');
+    const sum = arrModifyOdd.map(number => {
+      const digits = number.toString().split('');
       return digits.reduce((acc, digit) => acc + parseInt(digit), 0);
     });
 
-    const res = [...sum, ...arrModifyEven];
-   let test = res.reduce((currentSum, currentNumber) => {
+    const resultArr = [...sum, ...arrModifyEven];
+   let result = resultArr.reduce((currentSum, currentNumber) => {
       return currentSum + currentNumber;
     }, 0)
 
-    if(test % 2 === 0 && arr.length >= 13) {
+    if(result % 2 === 0 && arr.length >= 13) {
       this.input.classList.remove('error');
       this.input.classList.add('success');
     } else {

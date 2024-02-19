@@ -12,6 +12,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // Путь для выходного файла сборки
   },
 
+  devServer: {
+  port: 8080,
+  },
+
   module: {
     rules: [
       {
